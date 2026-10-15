@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formattazione del testo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Regole di stile interne */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        blockquote {
+            border-left: 4px solid #ccc;
+            padding-left: 10px;
+            margin-left: 0;
+            color: #666;
+        }
+
+    </style>
+</head>
+
+<p>
+
+    <!-- Ciascun studente dovrà creare una pagina HTML (o modificare
+una pagina HTML già creata per un esercizio precedente) in cui:
+- ci sia il link ad un foglio di stile CSS esterno e relative regole CSS,
+ci siano regole di stile interne e ci siano regole di stile inline.
+-
+utilizzare i selettori di base: selettore universale, selettore di
+tipo, selettore di classe, selettore di id.
+- utilizzate i selettori combinatori (selettore di discendenti,
+selettore di figli, selettore di fratelli adiacenti e selettore generale
+di fratelli) e selettore di attributo. -->
+
+    <h1>Formattazione del testo</h1>
+    <p>Svolgimento dell'esercizio di <strong>formattazione del testo</strong></p>
+    <blockquote>Fabio ci ha dato la consegna di metterci alla prova sulla <br> formattazione del testo</blockquote>
+
+    <p style="font-style: italic;"><abbr title="HyperText Markup Language">HTML</abbr> è utile per creare contenuti nelle pagine web.</p>
+
+    <h3>Argomenti trattati</h3>
+
+    <p><mark style="background-color: red;color: white">Abbiamo visto:</mark></p>
+
+    <ol class="sottolineato">
+        <li>Le liste ordinate</li>
+        <li>Le liste non ordinate</li>
+        <li>Le liste di definizione</li>
+    </ol>
+
+    <p><mark>Siamo andati avanti con altri argomenti come:</mark></p>
+    <ol class="sottolineato" start="4">
+        <li>Le tabelle
+            <ul>
+                <li>thead</li>
+                <li>tbody</li>
+                <li>tfoot</li>
+            </ul>
+        </li>
+        <li>Le immagini</li>
+        <li> I link</li>
+    </ol>
+
+</body>
+
+</html>

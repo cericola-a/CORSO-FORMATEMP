@@ -1,0 +1,19 @@
+
+mark {
+    background-color: green;
+    color: white;
+}
+
+.sottolineato {
+    text-decoration: underline;
+    color: white;
+}
+
+ol>li {
+    color: white;
+    background-color: black;
+}
+
+ul{
+    list-style: square;
+}
