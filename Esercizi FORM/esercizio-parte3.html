@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--
+ESERCIZIO SUI FORM – PARTE 3
+Ciascun studente dovrà creare una pagina HTML utilizzando:
+tag <input type=”reset”>, <input type=”search”>, <input
+type=”password”> (utilizzate questo campo con dei range di
+password prefissati: lettera minuscola, lettera maiuscola, set di
+caratteri speciali, numeri e di una lunghezza minima), il tag <input
+type=”file”> (prevedete un range di estensioni file ammesse), il
+tag <button> (personalizzarlo con l’utilizzo di caratteri UNICODE
+https://www.w3schools.com/charsets/ref_utf_symbols.asp
+oppure con un’icona-immagine).
+<input type=”number”> (utilizzando gli attributi min, max, step),
+<input type="datetime-local"> (per un campo di input con data
+successiva al 1 gennaio 2024 ad ora ) e <input type=”color"-->
+    <h1 class="testo-centrato">Esercizio form parte 3</h1>
+
+    <h4 class="testo-centrato">Input search</h4>
+    <form action="https://www.youtube.com/results" method="GET" target="_blank">
+        <input type="search" name="search_query" placeholder="Scrivi per cercare il video su YouTube" required>
+        <button type="submit">Cerca</button>
+    </form>
+    
+    <h4 class="testo-centrato">Input password con pattern</h4>
+    <form action="/" method="POST">
+
+        <input type="text" name="login" placeholder="Nome utente" required>
+
+        <input 
+            type="password" 
+            name="password" 
+            placeholder="Password" 
+            minlength="8" 
+            maxlength="20" 
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+            title="La password deve contenere tra gli 8 e i 20 caratteri, di cui uno minuscolo, uno maiuscolo, un numero e un carattere speciale"
+            required
+        >
+        <button type="submit">Accedi</button>
+    </form>
+
+    <h4 class="testo-centrato">Candidatura lavoro con input file e datetime</h4>
+    <form action="/" method="POST">
+        <input type="text" name="nome" placeholder="Nome " required>
+
+        <input type="text" name="cognome" placeholder="Cognome " required>
+
+        <input type="datetime-local" name="data" min="2024-01-01T00:00" required>
+        
+        <input type="file" name="file" accept=".jpg,.jpeg,.png,.pdf" required>
+        
+        <button type="submit">Candidati &#10003;</button>
+    </form>
+    
+    <h4 class="testo-centrato">Fieldset - step - reset</h4>
+    <form action="/" method="GET">
+        <fieldset>
+            <legend>La tabellina del 5</legend>
+            <input type="number" name="numero" min="0" max="100" step="5" placeholder="0">
+            <input type="reset" value="Resetta">
+        </fieldset>
+    </form>
+
+    <h4 class="testo-centrato">Input color</h4>
+    <form action="/" method="GET">
+        <input type="text" name="modello" placeholder="Modello della tua auto" required>
+
+        <input type="text" name="versione" placeholder="Versione allestimento" required>
+
+        <label for="colore">Seleziona il colore desiderato</label>
+        <input type="color" name="colore-carrozzeria" id="colore">
+        
+        <button type="submit">Salva le preferenze</button>
+    </form>
+    
+</body>

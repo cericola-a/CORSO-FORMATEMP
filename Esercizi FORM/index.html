@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="/" method="POST">
+        <label for="login">Nome utente o email:</label>
+        <input type="text" id="login" name="login" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Accedi">
+    </form>
+
+    <form action="/" method="GET" target="_blank">
+        <input type="text" name="name" placeholder="Nome" required>
+        <input type="text" name="subject" placeholder="Oggetto" required>
+        <input type="text" name="email" placeholder="Email" required>
+        <select name="info" required>
+            <option value="" selected>--scegli un'opzione--</option>
+            <option value="prodotto">Disponibilità prodotto</option>
+            <option value="guida">Guida alle taglie</option>
+            <option value="altro">Altro</option>
+        </select>
+        <textarea name="message" placeholder="Scrivi qui il tuo messaggio" required cols="30" rows="5"></textarea>
+        <input type="submit">
+    </form>
+</body>
+</html>

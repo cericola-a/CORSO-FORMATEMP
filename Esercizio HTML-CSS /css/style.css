@@ -1,0 +1,40 @@
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.center{
+    text-align: center;
+}
+
+.sfondo-rosso{
+    background-color: red;
+    color:white
+}
+
+.testo-centrato{
+    text-align:center;
+    
+}
+
+.bordo{
+    table-layout: auto;
+    width: 100%; 
+    border: 1px solid black;
+}
+
+th,td{
+    border: 1px solid black;
+}
+
+table{
+    border-collapse: collapse;
+    border: 1px solid black;
+} 
+
+#classifica{
+    background-color: red;
+}
+
+
+
