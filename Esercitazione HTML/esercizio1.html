@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Nome Della Rosa</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid black;
+            background-color: aquamarine;
+        }
+
+        th {
+            background-color: bisque;
+            border: 2px solid black;
+            font-weight: 700;
+        }
+
+        caption {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        nav {
+            background-color: #f2f2f2;
+            padding: 1rem;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav aria-label="Navigazione tra gli esercizi">
+        <ul>
+            <li><a href="esercizio1.html">Esercizio 1 - Il nome della rosa</a></li>
+            <li><a href="esercizio2.html">Esercizio 2 - Modulo</a></li>
+            <li><a href="esercizio3.html">Esercizio 3 - Corso front-end</a></li>
+        </ul>
+    </nav>
+
+    <!-- Creare una pagina HTML con contenuti relativi al mondo letterario.
+Inserire una tabella con le opere narrative di Umberto Eco
+(https://it.wikipedia.org/wiki/Umberto_Eco#Narrativa) riportando per ciascun’opera in
+tabella Nome, Data di pubblicazione, Casa editrice. Prevedere
+l’inserimento di un titolo <caption> della tabella.
+
+Inserire il video con Prologo dell’audiolibro de “Il nome della rosa”
+(
+https://youtu.be/Uomk8KBBfdY?si=dw6XHelrsAP8BfDs
+) con attributi autoplay e mute
+attivi.
+Inserire una gif tratta dal film de “Il nome della rosa” (
+https://1.bp.blogspot.com/-
+kyOBHc5KerQ/X58FCl-jHxI/AAAAAAAAZrs/-0_jMNf8Go8iM3ScaOfd28xgzcLwXr8xwCLcBGAsYHQ/
+s438/1.gif
+)
+Inserire con <iframe> la visualizzazione all’interno della tua pagina HTML
+della pagina Wikipedia su “Il nome della rosa”
+(https://it.wikipedia.org/wiki/Il_nome_della_rosa) -->
+
+
+
+
+    <!--TABELLA CON LE OPERE-->
+
+    <h1>Opere Narrative di Umberto Eco</h1>
+    <table>
+        <caption>Opere Narrative di Umberto Eco</caption>
+        <tr>
+            <th>Nome</th>
+            <th>Data di pubblicazione</th>
+            <th>Casa editrice</th>
+        </tr>
+        <tr>
+            <td>Il nome della rosa</td>
+            <td>1980</td>
+            <td>Bompiani</td>
+        </tr>
+        <tr>
+            <td>Il pendolo di Foucault</td>
+            <td>1988</td>
+            <td>Bompiani</td>
+        </tr>
+        <tr>
+            <td>L'isola del giorno prima</td>
+            <td>1994</td>
+            <td>Bompiani</td>
+        </tr>
+        <tr>
+            <td>Baudolino</td>
+            <td>2000</td>
+            <td>Bompiani</td>
+        </tr>
+        <tr>
+            <td>La misteriosa fiamma della regina Loana</td>
+            <td>2004</td>
+            <td>Bompiani</td>
+        </tr>
+        <tr>
+            <td>Il cimitero di Praga</td>
+            <td>2010</td>
+            <td>Bompiani</td>
+        </tr>
+    </table>
+
+
+    <!--AUDIOLIBRO-->
+    <h2>Prologo dell’audiolibro de “Il nome della rosa”</h2>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Uomk8KBBfdY?autoplay=1&mute=1"
+        title="YouTube video player">
+        </iframe>
+
+    <!--INSERIMENTO GIF-->
+    <h2>Gif tratta dal film de “Il nome della rosa”</h2>
+        <img src="https://1.bp.blogspot.com/-kyOBHc5KerQ/X58FCl-jHxI/AAAAAAAAZrs/-0_jMNf8Go8iM3ScaOfd28xgzcLwXr8xwCLcBGAsYHQ/s438/1.gif"
+        alt="Gif Il nome della rosa">
+
+    <!--IFRAME WIKIPEDIA-->
+    <h2>Visualizzazione della pagina Wikipedia su “Il nome della rosa”</h2>
+        <iframe src="https://it.wikipedia.org/wiki/Il_nome_della_rosa" width="100%" height="600"
+        title="Wikipedia Il nome della rosa"></iframe>
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 5px;
+            background-image: url(./sfondo-body.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        *:target {
+            background-color: yellow;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        #menu-esercizi,
+        #menu-sezioni {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: underline;
+            color: #333;
+        }
+
+        a:hover {
+            color: #007BFF;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid black;
+            background-color: lightgray;
+        }
+
+        th {
+            background-color: gray;
+            color: white;
+            border: 2px solid black;
+            font-weight: 700;
+        }
+
+        footer {
+            background-color: black;
+            padding: 16px;
+            text-align: center;
+            color: white;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        #top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #fff;
+            color: #000;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Creare una pagina HTML con contenuti relativi ad un corso di Front-end Developer. Utilizzare tra gli altri tag e attributi a disposizione: <header>, <nav>,<main>, <footer>, tag per la formattazione del testo (tra cui <h1>, <h3>,<p>, <em>, <q>, <ol>), almeno una tabella, almeno un link e almeno due contenuti multimediali (tra immagini, audio e video). Indentare il codice e inserire commenti al proprio codice-->
+
+    <h1>Corso di Front-End Developer</h1>
+    <header class="container">
+        <div id="menu-esercizi">
+
+            <nav>
+                <ul>
+                    <li><a href="esercizio1.html">Esercizio 1 - Il nome della rosa</a></li>
+                    <li><a href="esercizio2.html">Esercizio 2 - Modulo</a></li>
+                    <li><a href="esercizio3.html">Esercizio 3 - Corso front-end</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="menu-sezioni">
+
+            <nav>
+                <ul>
+                    <li><a href="#introduzione">Introduzione</a></li>
+                    <li><a href="#contenuti">Contenuti del corso</a></li>
+                    <li><a href="#docenti">Docenti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section id="introduzione">
+            <h2>Introduzione</h2>
+            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut laoreet tincidunt, nunc
+                nisl aliquam nunc, eget aliquam nunc nisl eget nunc. Sed euismod, nunc ut laoreet tincidunt, nunc nisl
+                aliquam nunc, eget aliquam nunc nisl eget nunc.</p>
+        </section>
+        <section id="contenuti">
+            <h2>Contenuti del corso</h2>
+
+
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <ol>
+
+                    <dl>
+                        <dt>HTML</dt>
+                        <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, earum rerum incidunt
+                            ullam nemo quos tempora ipsa amet quidem nesciunt.</dd>
+                        <dt>CSS</dt>
+                        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestias sequi officia
+                            laboriosam sint hic quo repellendus, similique numquam atque.</dd>
+                        <dt>JavaScript</dt>
+                        <dd><strong>JavaScript</strong> ipsum dolor sit amet consectetur adipisicing elit. Doloribus temporibus ipsam
+                            accusantium, necessitatibus eum ratione explicabo? Delectus recusandae quasi sit animi
+                            architecto? Exercitationem aliquid accusantium illo placeat officiis laboriosam sed.</dd>
+                        <dt>REACT</dt>
+                        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nobis nulla, commodi at
+                            consectetur voluptas qui perferendis ratione nisi doloremque repudiandae nesciunt distinctio
+                            quo quis deleniti, accusamus veritatis temporibus. Sunt neque excepturi soluta pariatur
+                            numquam. Repudiandae suscipit unde dignissimos. Placeat!</dd>
+                    </dl>
+
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/84TYC44ezIU?si=L0MHV8xMA-x2KSlI&mute=1&autoplay=1" title="YouTube video player"></iframe></iframe>
+
+        </section>
+        <section id="docenti">
+            <h2>Docenti</h2>
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>Fabio</td>
+                    <td>Amato</td>
+                    <td>fabio.amato@example.com</td>
+                </tr>
+                <tr>
+                    <td>Guido</td>
+                    <td>Verdi</td>
+                    <td>guido.verdi@example.com</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>Rossi</td>
+                    <td>maria.rossi@example.com</td>
+                </tr>
+                <tr>
+                    <td>Luca</td>
+                    <td>Bianchi</td>
+                    <td>luca.bianchi@example.com</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer class="container">
+        <section id="contatti">
+            <h2>Contatti</h2>
+            <p>Per ulteriori informazioni, contattaci all'indirizzo email: <a href="mailto:info@corsofrontend.com">info@corsofrontend.com</a></p>
+            <a id="top" href="#">Top</a>
+        </section>
+    </footer>
+</body>
+
+</html>

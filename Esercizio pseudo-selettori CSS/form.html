@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classi dei form</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="p3">
+    <h1>Pseudo-classi dei form</h1>
+    <ul class="menu">
+        <li><a href="./interazione.html">Pagina 1 - Pseudo-classi di interazione e struttura</a></li>
+        <li><a href="./vuoto-negazione-target.html">Pseudo-classi di tipo, vuoto, negazione e target</a></li>
+        <li><a href="./form.html">Pseudo-classi dei form</a></li>
+        <li><a href="./elementi.html">Pseudo-elementi</a></li>
+    </ul>
+
+    <form>
+        <h2>Registrazione lorem ipsum</h2>
+
+        <p>
+            <label for="nome">Nome (obbligatorio):</label>
+                <input type="text" id="nome" required>
+            
+        </p>
+
+        <p>
+            <label for="email">Email (obbligatoria, scrivi un indirizzo valido):</label>
+                <input type="email" id="email" required>
+            
+        </p>
+
+        <p>
+            <label for="soprannome">Soprannome (facoltativo)</label>
+                <input type="text" id="soprannome" placeholder="Scrivi il tuo soprannome">
+            
+        </p>
+
+        <p>
+            <label for="disabilitato">Campo disabilitato:</label>
+                <input id="disabilitato" type="text" placeholder="Non puoi scrivere" disabled>
+            
+        </p>
+
+        <p>
+            <label for="check">Accetto i termini</label>
+                <input id="check" type="checkbox">
+            
+        </p>
+
+        <button type="submit">Invia</button>
+    </form>
+</body>
+</html>
+
+

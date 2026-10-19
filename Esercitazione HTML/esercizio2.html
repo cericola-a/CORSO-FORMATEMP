@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .form-container {
+            background-color: bisque;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        fieldset {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        input[type="reset"] {
+            background-color: #f44336;
+        }
+        nav {
+            background-color: #f2f2f2;
+            padding: 1rem;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav aria-label="Navigazione tra gli esercizi">
+        <ul>
+            <li><a href="esercizio1.html">Esercizio 1 - Il nome della rosa</a></li>
+            <li><a href="esercizio2.html">Esercizio 2 - Modulo</a></li>
+            <li><a href="esercizio3.html">Esercizio 3 - Corso front-end</a></li>
+        </ul>
+    </nav>
+
+    <!--Creare una pagina HTML con un form contenente i seguenti campi:
+• cognome (casella di testo editabile lunga 30 caratteri)
+• nome (casella di testo editabile lunga 30 caratteri)
+• email (casella di testo editabile lunga 30 caratteri)
+• password (casella di testo con l’inserimento del seguente pattern
+obbligatorio: almeno un numero e almeno uno dei caratteri speciali !?@)
+• data e ora di nascita
+• età (casella di tipo numerico, con un range di valori possibili 18-70 anni)
+• sesso (selezionabile attraverso bottoni radio)
+• regione di residenza (da scegliere da un menu che riporta le 20 regioni
+italiane)
+• richiesta (area di testo editabile di 10 righe per 50 colonne, con stile
+differente dagli altri campi)
+• bottone di invio (con l’inserimento di un’icona)
+• bottone di reset (con l’inserimento di un’icona)-->
+    <div class="form-container">
+        <form>
+            <label for="cognome">Cognome:</label>
+            <input type="text" id="cognome" name="cognome" maxlength="30" required>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" maxlength="30" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" maxlength="30" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" pattern="(?=.*[0-9])(?=.*[!?@]).+"
+                title="Inserisci almeno un numero e almeno uno dei caratteri speciali ! ? @" required>
+
+            <label for="nascita">Data e ora di nascita:</label>
+            <input type="datetime-local" id="nascita" min="2008-01-19T00:00" name="nascita">
+
+            <label for="eta">Età:</label>
+            <input type="number" id="eta" name="eta" min="18" max="70">
+
+            <fieldset>
+                <legend>Sesso</legend>
+                <input type="radio" id="maschio" name="sesso" value="maschio">
+                <label for="maschio">Maschio</label>
+                <input type="radio" id="femmina" name="sesso" value="femmina">
+                <label for="femmina">Femmina</label>
+            </fieldset>
+
+            <label for="regione">Regione di residenza:</label>
+            <select id="regione" name="regione">
+                <option value="">Seleziona una regione</option>
+                <option value="abruzzo">Abruzzo</option>
+                <option value="basilicata">Basilicata</option>
+                <option value="calabria">Calabria</option>
+                <option value="campania">Campania</option>
+                <option value="emilia-romagna">Emilia-Romagna</option>
+                <option value="friuli-venezia-giulia">Friuli-Venezia Giulia</option>
+                <option value="lazio">Lazio</option>
+                <option value="liguria">Liguria</option>
+                <option value="marche">Marche</option>
+                <option value="molise">Molise</option>
+                <option value="piemonte">Piemonte</option>
+                <option value="puglia">Puglia</option>
+                <option value="sardegna">Sardegna</option>
+                <option value="sicilia">Sicilia</option>
+                <option value="toscana">Toscana</option>
+                <option value="abruzzo">Abruzzo</option>
+                <option value="campania">Campania</option>
+            </select>
+
+            <label for="richiesta">Richiesta:</label><br>
+            <textarea id="richiesta" name="richiesta" rows="10" cols="50"></textarea>
+
+            <input type="submit" value="&#10003 INVIA">
+            <input type="reset" value="&#10006 SVUOTA">
+
+        </form>
+    </div>
+</body>
+
+</html>

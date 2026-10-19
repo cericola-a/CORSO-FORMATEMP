@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classi di tipo, vuoto, negazione e target</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="p2">
+    <h1>Pseudo-classi di tipo, vuoto, negazione e target</h1>
+
+    <ul class="menu">
+        <li><a href="./interazione.html">Pagina 1 - Pseudo-classi di interazione e struttura</a></li>
+        <li><a href="./vuoto-negazione-target.html">Pseudo-classi di tipo, vuoto, negazione e target</a></li>
+        <li><a href="./form.html">Pseudo-classi dei form</a></li>
+        <li><a href="./elementi.html">Pseudo-elementi</a></li>
+    </ul>
+
+    <nav>
+        <a href="#sezione1">Vai alla sezione 1</a>
+        <a href="#sezione2">Vai alla sezione 2</a>
+        <a href="#sezione3">Vai alla sezione 3</a>
+    </nav>
+
+    <section id="sezione1">
+        <h2>Sezione 1: of-type</h2>
+        <p>Lorem ipsum dolor sit amet, primo paragrafo.</p>
+        <p>Lorem ipsum dolor sit amet, secondo paragrafo.</p>
+        <p>Lorem ipsum dolor sit amet, terzo paragrafo.</p>
+        <p>Lorem ipsum dolor sit amet, quarto paragrafo.</p>
+        <h3>Sottotitolo lorem ipsum</h3>
+    </section>
+
+    <section id="sezione2">
+        <h2>Sezione 2: only-of-type ed empty</h2>
+        <div class="solo">
+            <span>Unico span del suo contenitore. </span>
+            <p>Paragrafo di contorno </p>
+        </div>
+        <p>Qui sotto c'è un div vuoto:</p>
+        <div class="vuoto"></div>
+    </section>
+
+    <section id="sezione3">
+        <h2>Sezione 3: not</h2>
+        <ul>
+            <li>Lorem ipsum normale</li>
+            <li>Lorem ipsum normale</li>
+            <li class="speciale">Lorem ipsum speciale</li>
+            <li>Lorem ipsum normale</li>
+        </ul>
+    </section>
+</body>
+</html>

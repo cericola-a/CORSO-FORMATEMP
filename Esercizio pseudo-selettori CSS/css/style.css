@@ -1,0 +1,246 @@
+/* ===== STILE BASE ===== */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    line-height: 1.5;
+    color: #222;
+}
+
+h1 {
+    color: #2c3e50;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+/* ===== PAGINA 1 - hover, active, focus, first-child, last-child, nth-child, nth-last-child, only-child ===== */
+
+/* hover */
+.p1 a:hover {
+    color: white;
+    background-color: #2980b9;
+}
+
+.p1 button:hover {
+    background-color: #27ae60;
+    color: white;
+}
+
+/* active */
+.p1 button:active {
+    background-color: #c0392b;
+}
+
+/* focus */
+.p1 input:focus {
+    outline: none;
+    border: 2px solid #e67e22;
+    background-color: #fff6e5;
+}
+
+
+/* first-child */
+.p1 .elenco li:first-child {
+    font-weight: 700;
+}
+
+/* last-child */
+.p1 .elenco li:last-child {
+    font-style: italic;
+}
+
+/* nth-child */
+.p1 .elenco li:nth-child(odd) {
+    background-color: bisque;
+}
+
+.p1 .elenco li:nth-child(4) {
+    color: #c0392b;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+/* nth-last-child */
+.p1 .elenco li:nth-last-child(2) {
+    color: green;
+}
+
+/* only-child */
+.p1 .singolo p:only-child {
+    border-left: 5px solid #8e44ad;
+    padding-left: 10px;
+    background-color: #f5eef8;
+}
+
+/* ===== PAGINA 2 - nth-of-type, nth-last-of-type, first-of-type, last-of-type, only-of-type, empty, not, target ===== */
+
+.p2 nav a {
+    margin-right: 15px;
+}
+
+.p2 section {
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+}
+
+/* first-of-type */
+.p2 section p:first-of-type {
+    font-weight: bold;
+    color: #2980b9;
+}
+
+/* nth-of-type */
+.p2 section p:nth-of-type(2) {
+    background-color: #fdebd0;
+}
+
+/* nth-last-of-type */
+.p2 section p:nth-last-of-type(2) {
+    background-color: #d5f5e3;
+}
+
+/* last-of-type */
+.p2 section p:last-of-type {
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+/* only-of-type */
+.p2 .solo span:only-of-type {
+    background-color: #f1c40f;
+    padding: 3px 8px;
+}
+
+/* empty */
+.p2 .vuoto {
+    height: 40px;
+    border: 2px dotted #e74c3c;
+}
+
+.p2 .vuoto:empty {
+    background-color: #602823;
+}
+
+/* not */
+.p2 li:not(.speciale) {
+    color: #7f8c8d;
+}
+
+.p2 .speciale {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+/* target */
+.p2 section:target {
+    background-color: #fcf3cf;
+    border: 3px solid #f39c12;
+}
+
+/* ===== PAGINA 3 - checked, disabled, required, optional, valid, invalid, root ===== */
+
+/* root */
+:root {
+    --colore-valido: #27ae60;
+    --colore-errore: #c0392b;
+    --colore-neutro: #7f8c8d;
+}
+
+.p3 input[type="text"],
+.p3 input[type="email"] {
+    padding: 6px;
+    border: 2px solid #bdc3c7;
+}
+
+/* required */
+.p3 input:required {
+    border-left: 6px solid #e67e22;
+}
+
+/* optional */
+.p3 input:optional {
+    border-left: 6px solid var(--colore-neutro);
+}
+
+/* valid */
+.p3 input:valid {
+    border-color: var(--colore-valido);
+    background-color: #eafaf1;
+}
+
+/* invalid */
+.p3 input:invalid {
+    border-color: var(--colore-errore);
+    background-color: #fdedec;
+}
+
+/* disabled */
+.p3 input:disabled {
+    background-color: #d5d8dc;
+    color: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* checked */
+.p3 input[type="checkbox"]:checked + * {
+    font-weight: bold;
+}
+
+.p3 input[type="checkbox"]:checked {
+    outline: 3px solid var(--colore-valido);
+}
+
+/* ===== PAGINA 4 - before, after, first-letter, first-line,
+        selection, placeholder ===== */
+
+/* first-letter */
+.p4 .intro::first-letter {
+    font-size: 3em;
+    color: #c0392b;
+    float: left;
+    margin-right: 8px;
+    line-height: 1;
+}
+
+/* first-line */
+.p4 .intro::first-line {
+    font-weight: bold;
+    color: #2980b9;
+}
+
+/* before */
+.p4 .citazione::before {
+    content: "<< ";
+    color: #8e44ad;
+    font-size: 1.5em;
+}
+
+/* after */
+.p4 .citazione::after {
+    content: " >>";
+    color: #8e44ad;
+    font-size: 1.5em;
+}
+
+.p4 a.esterno::after {
+    content: " --> (apre in una nuova scheda)";
+}
+
+/* selection */
+.p4 ::selection {
+    background-color: #f1c40f;
+    color: #2c3e50;
+}
+
+/* placeholder */
+.p4 input::placeholder {
+    color: #e67e22;
+    font-style: italic;
+}
+
