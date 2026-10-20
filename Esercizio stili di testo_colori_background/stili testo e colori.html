@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stili di testo - colori - background</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--
+1. ESERCIZIO SU STILI DI TESTO
+Ciascun studente dovrà creare una pagina HTML (o più pagine
+HTML o modificare una pagina HTML a cui aveva già lavorato)
+comprendente almeno nove tra le seguenti proprietà: font-
+family, font-size, font-weight, font-style, line-height, text-align,
+text-decoration, text-indent, text-transform, letter-spacing, word-
+spacing, text-shadow, font-variant, font. Utilizzate un font messo
+a disposizione da Google o da scaricare da un altro sito (ad
+esempio: Dafont).
+2.
+ESERCIZIO SU COLORI E BACKGROUND
+Ciascun studente dovrà creare una pagina HTML (o più pagine
+HTML o modificare una pagina HTML a cui aveva già lavorato)
+comprendente le seguenti proprietà CSS: color (utilizzare almeno
+tre formati differenti di colore), opacity, background-color,
+background-image (sia con un’immagine sia con un gradiente),
+background-repeat, background-attachment, background-
+position, background-size, uno solo tra background-clip e
+background-origin, background-blend-mode.-->
+
+<header class="container">
+    <div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#introduzione">Introduzione</a></li>
+                <li><a href="#contenuti">Contenuti del corso</a></li>
+                <li><a href="#docenti">Docenti</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="container">
+    <section id="introduzione" class="card">
+            <h1>Corso di Front-End Developer</h1>
+            <p>Scopri il mondo del front-end development con il nostro corso completo! Il codice non è solo uno strumento, ma una forma di espressione che permette di creare esperienze utenti memorabili.</p>
+    </section>
+    <section id="contenuti" class="card">
+        <div id="overlay"></div>
+        <h2>Contenuti del corso</h2>
+            <div class="lista">    
+                <ol>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                </ol>
+            </div>
+        <h3>Descrizione dei contenuti</h3>
+                    <dl>
+                        <dt>HTML</dt>
+                            <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, earum rerum incidunt
+                            ullam nemo quos tempora ipsa amet quidem nesciunt.</dd>
+                        <dt>CSS</dt>
+                            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestias sequi officia
+                            laboriosam sint hic quo repellendus, similique numquam atque.</dd>
+                        <dt>JavaScript</dt>
+                            <dd><strong>JavaScript</strong> ipsum dolor sit amet consectetur adipisicing elit. Doloribus temporibus ipsam
+                            accusantium, necessitatibus eum ratione explicabo? Delectus recusandae quasi sit animi
+                            architecto? Exercitationem aliquid accusantium illo placeat officiis laboriosam sed.</dd>
+                        <dt>REACT</dt>
+                            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nobis nulla, commodi at
+                            consectetur voluptas qui perferendis ratione nisi doloremque repudiandae nesciunt distinctio
+                            quo quis deleniti, accusamus veritatis temporibus. Sunt neque excepturi soluta pariatur
+                            numquam. Repudiandae suscipit unde dignissimos. Placeat!</dd>
+                    </dl>
+                
+    </section>
+    <section id="docenti" class="card">
+        <h2>Docenti</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Cognome</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fabio</td>
+                        <td>Amato</td>
+                        <td>fabio.amato@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Guido</td>
+                        <td>Verdi</td>
+                        <td>guido.verdi@example.com</td>
+                    </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>Rossi</td>
+                    <td>maria.rossi@example.com</td>
+                </tr>
+                <tr>
+                    <td>Luca</td>
+                    <td>Bianchi</td>
+                    <td>luca.bianchi@example.com</td>
+                </tr>
+                </tbody>
+            </table>
+    </section>
+</main>
+<footer id="contatti" class="container">
+    
+        <h2>Contatti</h2>
+        <p>Per ulteriori informazioni, contattaci all'indirizzo email: <a href="mailto:info@corsofrontend.com">info@corsofrontend.com</a></p>
+        <a id="top" href="#">Top</a>
+</footer>
+</body>
+
+</html>
