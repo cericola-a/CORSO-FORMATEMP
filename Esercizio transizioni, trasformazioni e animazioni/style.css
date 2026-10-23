@@ -1,0 +1,189 @@
+
+/* REGOLE GENERALI */
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+h2 {
+    margin-top: 40px;
+    color: red;
+    text-align: center;
+}
+
+.box {
+    width: 150px;
+    height: 70px;
+    margin: 20px;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 70px;
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+/* ========================= */
+/* TRANSIZIONI */
+/* ========================= */
+
+/* Cambia colore gradualmente */
+
+.transizione1 {
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+.transizione1:hover {
+    background-color: lightcoral;
+}
+
+/* Cambia dimensione gradualmente */
+
+.transizione2 {
+    transition-property: width;
+    transition-duration: 3s;
+}
+
+.transizione2:hover {
+    width: 300px;
+}
+
+/* Delay */
+
+.transizione3 {
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+
+.transizione3:hover {
+    background-color: lightgreen;
+}
+
+/* Cambia la velocità della transizione */
+
+.transizione4 {
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+.transizione4:hover {
+    transform: translateX(100px);
+}
+
+/* ========================= */
+/* TRASFORMAZIONI */
+/* ========================= */
+
+/* Ruota l'elemento */
+
+.trasformazione1:hover {
+    transform: rotate(45deg);
+}
+
+/* Ingrandisce l'elemento */
+
+.trasformazione2:hover {
+    transform: scale(2);
+    margin: 50px;
+}
+
+/* Sposta l'elemento */
+
+.trasformazione3:hover {
+    transform: translate(50px, 20px);
+}
+
+/* Inclina l'elemento */
+
+.trasformazione4:hover {
+    transform: skew(20deg);
+}
+
+/* Cambia il punto attorno al quale ruota */
+
+.trasformazione5 {
+    transform-origin: left top;
+}
+
+.trasformazione5:hover {
+    transform: rotate(30deg);
+}
+
+/* ========================= */
+/* ANIMAZIONI */
+/* ========================= */
+
+/* Animazione di movimento */
+
+.animazione1 {
+    animation-name: movimento;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+}
+
+@keyframes movimento {
+    0% {
+        transform: translateX(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateX(150px);
+        transform: translateY(150px);
+    }
+}
+
+/* Animazione del colore */
+
+.animazione2 {
+    animation-name: cambio-colore;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cambio-colore {
+    from {
+        background-color: lightblue;
+    }
+
+    to {
+        background-color: orange;
+    }
+}
+
+/* Animazione di rotazione */
+
+.animazione3 {
+    animation-name: rotazione;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+
+@keyframes rotazione {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
