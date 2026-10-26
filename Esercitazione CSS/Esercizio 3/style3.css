@@ -1,0 +1,110 @@
+/* ESERCIZIO 3
+Creare una pagina HTML che contenga diversi elementi ciascuno dei quali
+verrà utilizzato per inserire le seguenti proprietà:
+·
+posizionare un div rispetto al bordo superiore destro della finestra
+del browser con una distanza di 100px;
+·
+spostare un div di 50 px verso il basso e 25px verso destra rispetto
+alla sua posizione originale;
+·
+posizionare e fissare un div rispetto al bordo superiore sinistro della
+finestra del browser con una distanza di 20px;
+·
+posizionare un div rispetto ad un altro div contenitore con una
+distanza di 15px dal bordo superiore e 60px dal bordo destro;
+·
+visualizzare gli elementi di una lista non ordinata (tre elementi, con
+una larghezza di 200px) su una singola riga;
+·
+nascondere il testo di un paragrafo quando sposto il cursore del
+mouse sul paragrafo stesso */
+
+/* IMPOSTAZIONI GENERALI */
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 50px;
+}
+
+div {
+    background-color: lightblue;
+    border: 1px solid black;
+    padding: 15px;
+    margin: 20px;
+}
+
+li {
+    background-color: lightgreen;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+p {
+    padding: 10px;
+}
+
+
+/* 1. Posizionare il div in alto a destra della finestra, a 100px dal bordo superiore e dal bordo destro */
+#div-fisso-destra{
+    max-width: 100px;
+    position: fixed;
+    top: 100px;
+    right: 100px;
+}
+
+
+/* 2. Spostare il div di 50px verso il basso e di 25px verso destra rispetto alla posizione originale */
+#div-spostato{
+    position: relative;
+    top: 50px;
+    left: 25px;
+    max-width: 100px;
+    margin: 100px;
+}
+
+
+/* 3. Fissare il div in alto a sinistra della finestra, a 20px dal bordo superiore e dal bordo sinistro */
+
+#div-fisso-sinistra{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+
+/* 4. Posizionare il div interno rispetto al contenitore, a 15px dal bordo superiore e a 60px dal bordo destro */
+#contenitore{
+    position: relative;
+    min-height: 100px;
+}
+
+#div-interno{
+    position: absolute;
+    top: 15px;
+    right: 60px;
+    max-width: 100px;
+}
+
+/* 5. Visualizzare i tre elementi della lista sulla stessa riga, assegnando a ciascuno una larghezza di 200px */
+#lista li{
+    display: inline-block;
+    width: 200px;
+}
+
+
+/* 6. Nascondere il testo del paragrafo quando il cursore del mouse si trova sopra di esso */
+#paragrafo{
+    background-color: bisque;
+    font-weight: bold;
+}
+#paragrafo span:hover{
+    visibility: hidden;
+}
+

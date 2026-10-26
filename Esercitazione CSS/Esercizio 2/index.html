@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 2</title>
+    <link rel="stylesheet" href="./style2.css">
+</head>
+
+<body>
+    <h1>Red Sox - Futsal</h1>
+
+    <p>
+        Benvenuti nella pagina dedicata alla nostra squadra di calcio a 5!
+    </p>
+
+    <!-- colorare di rosso gli elementi della lista quando il mouse passa sopra -->
+
+    <h2>Le caratteristiche del futsal</h2>
+
+    <ul>
+        <li>Velocità e rapidità di gioco</li>
+        <li>Passaggi precisi e veloci</li>
+        <li>Collaborazione tra compagni</li>
+        <li>Attenzione in fase difensiva</li>
+    </ul>
+
+
+    <!-- rendere in grassetto le righe pari e colorare di rosso la riga vuota con padding di 30px -->
+
+    <h2>La nostra rosa</h2>
+
+    <table border="1">
+        <tr>
+            <th>Numero</th>
+            <th>Giocatore</th>
+            <th>Ruolo</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Marco</td>
+            <td>Portiere</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Luca</td>
+            <td>Laterale</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Andrea</td>
+            <td>Pivot</td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Matteo</td>
+            <td>Universale</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Paolo</td>
+            <td>Portiere</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Simone</td>
+            <td>Laterale</td>
+        </tr>
+    </table>
+
+
+    <!--  colorare il paragrafo dopo aver cliccato sul link che punta ad esso -->
+
+    <h2>La filosofia della squadra</h2>
+
+    <a href="#filosofia">Scopri la nostra filosofia</a>
+
+    <p id="filosofia">
+        Nel futsal ogni giocatore è importante: impegno, rispetto
+        e spirito di squadra sono fondamentali per raggiungere
+        grandi obiettivi.
+    </p>
+
+
+    <!-- rendere blu il pulsante al passaggio del mouse e giallo quando viene cliccato -->
+
+    <h2>Partecipa alla squadra</h2>
+
+    <button type="button">Forza Red Sox!</button>
+
+
+    <!--distinguere i campi obbligatori, disabilitati e opzionali del modulo -->
+
+    <h2>Richiedi informazioni</h2>
+
+    <form>
+        <label for="nome">Nome*:</label>
+        <input type="text" id="nome" class="obbligatorio" required>
+
+        <br><br>
+
+        <label for="email">Email*:</label>
+        <input type="email" id="email" class="obbligatorio" required>
+
+        <br><br>
+
+        <label for="telefono">Telefono:</label>
+        <input type="tel" id="telefono" placeholder="facoltativo">
+
+        <br><br>
+
+        <label for="categoria">Categoria:</label>
+        <input type="text" id="categoria" value="Calcio a 5" disabled>
+
+        <br><br>
+
+        <input type="submit" value="Invia richiesta">
+    </form>
+
+
+    <!-- per sottolineare il primo paragrafo della serie di paragrafi -->
+
+    <h2>Il nostro sport</h2>
+
+    <div class="testi">
+        <p>Il futsal è uno sport veloce che richiede tecnica e concentrazione.</p>
+
+        <p>Ogni partita mette alla prova la capacità di collaborare.</p>
+
+        <p>Allenamento e determinazione aiutano la squadra a migliorare.</p>
+    </div>
+</body>
+
+</html>

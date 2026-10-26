@@ -1,0 +1,107 @@
+/* selettori di discendenti */
+/* selettori di figli */
+/* selettore di fratelli adiacenti */
+/* selettore generale di fratelli */
+
+/* stili da assegnare background-color, border, color, font-size, font-style, font-weight, padding, margin, text-align */
+/* selettore di attributo e assegnare un background-color o color */
+/* usare ::after o ::before per inserire un'icona */
+/* ::first-letter, ::first-line e ::selection */
+*{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    max-width: 900px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px lightgreen;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+section{
+    width: 500px;
+    border: 2px solid rgba(255, 0, 0, 0.518);
+    padding: 50px;
+    margin: 20px auto;
+}
+
+
+/* INIZIO ESERCIZIO */
+
+
+.logo-menu{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.logo-menu > img{
+    border-radius: 100%;
+}
+
+#menu ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+ul li{
+    color: red;
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+input{
+    width: 300px;
+    margin: 5px;
+    outline: 1px solid green;
+    border-radius: 5px;
+}
+
+
+input[type="text"]{
+    font-style: italic;
+}
+
+.lettera::first-letter{
+    color: green;
+    font-weight: 900;
+    font-size: 3em;
+}
+
+p + p{
+    color: darkgoldenrod;
+}
+
+
+p::first-line{
+    color: green;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.selezione::selection{
+    background-color: yellow;
+    color: blue;
+}
+
+section > p::after{
+    content: "\"";
+    font-weight: 500;
+    color: brown;
+}
+section > p::before{
+    content: "\"";
+    font-weight: 500;
+    color: brown;
+}

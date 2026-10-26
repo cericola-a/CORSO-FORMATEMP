@@ -1,0 +1,127 @@
+/* Creare una pagina HTML che utilizzi gli opportuni selettori di pseudo-
+classe per:
+·
+colorare di rosso gli elementi di una lista quando il cursore del
+mouse vi passa sopra;
+·
+inserire un font bold per le righe pari di una tabella (costituita da
+otto righe) e prevedere uno sfondo rosso e un padding di 30px per
+una riga senza alcun contenuto;
+·
+prevedere uno sfondo colorato per un paragrafo dopo aver cliccato
+col mouse sul link che punta a tale paragrafo;
+·
+far diventare di colore blu un pulsante quando il cursore del mouse
+vi passa sopra e farlo diventare di colore giallo quando il pulsante è
+cliccato;
+·
+prevedere uno stile differente per i campi obbligatori, disabilitati o
+opzionali di un form;
+·
+rendere sottolineato il primo paragrafo di testo di una serie di
+paragrafi di testo. 
+Laddove uno stesso risultato può essere raggiunto con più selettori di pseudo-classe, prevedere un commentio al CSS per indicare i selettori di psuedo-classe alternativi */
+
+
+/* Stile generale della pagina */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+}
+
+h1 {
+    color: darkred;
+}
+
+h2 {
+    color: darkblue;
+}
+
+
+/* Colorare di rosso gli elementi della lista al passaggio
+   del mouse */
+
+li:hover {
+    color: red;
+}
+
+
+/* Rendere in grassetto le righe pari della tabella */
+
+tr:nth-child(even) {
+    font-weight: bold;
+}
+
+
+/* Sfondo rosso e padding di 30px per la riga vuota */
+
+tr td:empty {
+    background-color: red;
+}
+
+td:empty {
+    padding: 30px;
+}
+
+
+/* Colorare il paragrafo raggiunto tramite il link */
+
+p:target {
+    background-color: lightgreen;
+}
+
+
+/* Pulsante blu al passaggio del mouse */
+
+button{
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+}
+
+button:hover {
+    background-color: blue;
+}
+
+
+/* Pulsante giallo quando viene cliccato */
+
+button:active {
+    background-color: yellow;
+    color: black;
+}
+
+
+/* Stile dei campi obbligatori */
+
+input:required {
+    background-color: lightcoral;
+}
+
+.obbligatorio:valid{
+    background-color: green;
+}
+/* Stile dei campi opzionali */
+
+input {
+    background-color: lightgreen;
+}
+
+
+/* Stile dei campi disabilitati */
+
+input:disabled {
+    background-color: lightgray;
+}
+
+
+/* Sottolineare il primo paragrafo della serie */
+
+.testi p:first-of-type {
+    text-decoration: underline;
+}
+
+/* alternative :first-child e :nth-child(1) */

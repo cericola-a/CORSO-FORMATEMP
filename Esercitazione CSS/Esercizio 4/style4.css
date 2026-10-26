@@ -1,0 +1,105 @@
+/* ESERCIZIO 4
+Creare una pagina HTML che contenga diversi elementi ciascuno dei quali
+verrà utilizzato per inserire le seguenti proprietà:
+·
+ruotare di 45° un div contenente del testo;
+·
+cambiare gradualmente il colore di sfondo di un div al passaggio del
+mouse;
+·
+cambiare gradualmente il colore di sfondo di un div (da un colore
+iniziale ad un colore finale e viceversa) in un loop infinito;
+·
+cambiare gradualmente le dimensioni di un div (da 150px X 150px a
+300px X 200px) al passaggio del mouse;
+·
+agire, al passaggio del mouse, su di un div di dimensione 300px X
+300px in modo che sia spostato di 50px in orizzontale e 80px in verticale, sia ruotato di 30° e sia scalato al 120 % delle dimensioni originali. */
+
+
+
+/* IMPOSTAZIONI GENERALI */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+div {
+    margin: 30px;
+    padding: 20px;
+    background-color: lightblue;
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+/* 1. Ruotare il div di 45 gradi */
+
+#div-ruotato {
+    width: 150px;
+    transform: rotate(45deg);
+}
+
+
+/* 2. Cambiare gradualmente il colore di sfondo al passaggio del mouse */
+
+#div-colore {
+    width: 200px;
+    background-color: lightblue;
+    transition: background-color 1s;
+}
+
+#div-colore:hover {
+    background-color: lightcoral;
+}
+
+
+/* 3. Cambiare continuamente il colore di sfondo in un loop infinito */
+
+#div-animato {
+    width: 200px;
+    animation: cambia-colore 3s infinite alternate;
+}
+
+@keyframes cambia-colore {
+    from {
+        background-color: lightblue;
+    }
+
+    to {
+        background-color: lightgreen;
+    }
+}
+
+
+/* 4. Cambiare gradualmente le dimensioni al passaggio del mouse */
+
+#div-dimensioni {
+    width: 150px;
+    height: 150px;
+    transition: width 1s, height 1s;
+}
+
+#div-dimensioni:hover {
+    width: 300px;
+    height: 200px;
+}
+
+
+/* 5. Spostare, ruotare e ingrandire il div al passaggio del mouse */
+
+#div-trasformato {
+    width: 300px;
+    height: 300px;
+    transition: transform 1s;
+}
+
+#div-trasformato:hover {
+    transform: translate(50px, 80px) rotate(30deg) scale(1.2);
+    margin: 40px;
+}
