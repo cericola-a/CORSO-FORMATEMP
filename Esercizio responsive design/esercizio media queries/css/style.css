@@ -1,0 +1,212 @@
+/* REGOLE GENERALI */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* margin: 0; */
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    color: #222222;
+}
+
+header {
+    background-color: #b71c1c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+nav {
+    background-color: #222222;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+}
+
+main {
+    padding: 20px;
+}
+
+.contenuto {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #b71c1c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+}
+
+.contenitore {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.box {
+    background-color: white;
+    border: 2px solid #b71c1c;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+footer {
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* SMARTPHONE */
+/* Fino a 600px */
+
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 15px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+    .contenitore {
+        display: block;
+    }
+
+    .box {
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}
+
+
+/* TABLET */
+/* Da 601px a 1024px */
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+    header {
+        background-color: #1565c0;
+    }
+
+    .contenitore {
+        flex-wrap: wrap;
+    }
+
+    .box {
+        flex: 1 1 40%;
+    }
+
+    nav {
+        padding: 20px;
+    }
+}
+
+
+/* DESKTOP */
+/* Da 1025px in poi */
+
+@media screen and (min-width: 1025px) {
+
+    main {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    header {
+        padding: 40px;
+    }
+
+    .box {
+        padding: 35px;
+    }
+}
+
+
+/* MEDIA QUERY CON WIDTH E HEIGHT */
+
+@media screen and (max-height: 500px) {
+
+    header {
+        padding: 5px;
+    }
+
+    header p {
+        display: none;
+    }
+}
+
+
+/* OPERATORE ONLY */
+
+@media only screen and (min-width: 1025px) {
+
+    nav a {
+        margin: 30px;
+    }
+}
+
+
+/* OPERATORE NOT */
+
+@media not print {
+
+    button {
+        cursor: pointer;
+    }
+}
+
+
+/* OPERATORE AND CON WIDTH E HEIGHT */
+
+@media screen and (min-width: 600px) and (min-height: 500px) {
+
+    .contenuto {
+        border: 1px solid black;
+    }
+}
+
+
+/* STAMPA */
+
+@media print {
+
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    header,
+    footer {
+        background-color: white;
+        color: black;
+    }
+
+    nav,
+    button {
+        display: none;
+    }
+
+    .box,
+    .contenuto {
+        border: 1px solid black;
+        font-style: italic;
+    }
+}

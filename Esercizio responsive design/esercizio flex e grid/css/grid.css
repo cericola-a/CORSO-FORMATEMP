@@ -1,0 +1,102 @@
+/* Imposto lo stile generale della pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Intestazione */
+.intestazione {
+    background-color: #17365d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Menu di navigazione */
+.menu {
+    background-color: #222;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+}
+
+/* Contenitore organizzato con Grid */
+.contenitore {
+    display: grid;
+
+    /* Definisco due colonne */
+    grid-template-columns: 2fr 1fr;
+
+    /* Definisco le righe */
+    grid-template-rows: auto auto;
+
+    /* Assegno un nome alle aree */
+    grid-template-areas:
+        "principale informazioni"
+        "risultati informazioni";
+
+    /* Spazio tra gli elementi */
+    grid-gap: 15px;
+
+    /* Allineo gli elementi nelle celle */
+    justify-items: stretch;
+    align-items: stretch;
+
+    padding: 20px;
+}
+
+/* Stile comune alle sezioni */
+.principale,
+.informazioni,
+.risultati {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+/* Assegno le aree ai vari elementi */
+.principale {
+    grid-area: principale;
+}
+
+.informazioni {
+    grid-area: informazioni;
+}
+
+.risultati {
+    grid-area: risultati;
+}
+
+/* Piè di pagina */
+.piede {
+    background-color: #17365d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Adatto la pagina agli schermi piccoli */
+@media screen and (max-width: 600px) {
+
+    .contenitore {
+        /* Passo a una sola colonna */
+        grid-template-columns: 1fr;
+
+        /* Dispongo le sezioni una sotto l'altra */
+        grid-template-areas:
+            "principale"
+            "informazioni"
+            "risultati";
+    }
+
+    .menu a {
+        /* Dispongo i collegamenti verticalmente */
+        display: block;
+        margin: 10px;
+    }
+}

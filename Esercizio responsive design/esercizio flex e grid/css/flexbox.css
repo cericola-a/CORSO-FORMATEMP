@@ -1,0 +1,88 @@
+/* Imposto lo stile generale */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Intestazione */
+.intestazione {
+    background-color: #17365d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Menu di navigazione */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    padding: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 10px 20px;
+}
+
+/* Contenitore dei giocatori */
+.squadra {
+    display: flex;
+
+    /* Distribuisco lo spazio */
+    justify-content: space-around;
+
+    /* Allineo gli elementi verticalmente */
+    align-items: stretch;
+
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Stile delle schede dei giocatori */
+.giocatore {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 180px;
+}
+
+/* Evidenzio il portiere */
+.portiere {
+    background-color: #baf0a7;
+
+    /* Sposto il portiere dopo gli altri giocatori */
+    order: 1;
+}
+
+/* Piè di pagina */
+.piede {
+    background-color: #17365d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Adatto la pagina agli schermi piccoli */
+@media screen and (max-width: 600px) {
+
+    .squadra {
+        /* Dispongo i giocatori in verticale */
+        flex-direction: column;
+    }
+
+    .giocatore {
+        /* Ogni scheda occupa tutta la larghezza disponibile */
+        flex-basis: auto;
+    }
+
+    .menu {
+        /* Dispongo il menu in verticale */
+        flex-direction: column;
+    }
+}
