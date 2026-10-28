@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio JavaScript</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f2f2f2; }
+        h1 { text-align: center; }
+        section { background-color: white; padding: 15px; margin-bottom: 15px; border-radius: 8px; }
+        button { padding: 8px; margin: 5px 0; cursor: pointer; }
+        p { color: #333; }
+    </style>
+</head>
+<body>
+    <h1>Esercizio JavaScript</h1>
+
+    <section>
+        <h2>1. Operatori matematici</h2>
+        <p>Valori usati: numero 1 = 10, numero 2 = 5</p>
+        <button id="calcola">Calcola</button>
+        <p id="risultatoMatematico"></p>
+    </section>
+
+    <section>
+        <h2>2. Operatori numerici</h2>
+        <button id="provaNumerici">Prova gli operatori</button>
+        <p id="risultatoNumerico"></p>
+    </section>
+
+    <section>
+        <h2>3. Operatori relazionali</h2>
+        <button id="provaRelazionali">Prova i confronti</button>
+        <p id="risultatoRelazionale"></p>
+    </section>
+
+    <section>
+        <h2>4. Operatori logici</h2>
+        <button id="provaLogici">Prova gli operatori logici</button>
+        <p id="risultatoLogico"></p>
+    </section>
+
+    <section>
+        <h2>5. Concatenazione delle stringhe</h2>
+        <button id="provaStringhe">Unisci le stringhe</button>
+        <p id="risultatoStringhe"></p>
+    </section>
+
+    <section>
+        <h2>6. If, else if, else</h2>
+        <p>Il tuo lavoro è stato:</p>
+        <button id="controllaVoto">Controlla voto</button>
+        <p id="risultatoVoto"></p>
+    </section>
+
+    <section>
+        <h2>7. Switch, case, break</h2>
+        <p>Numero usato: 4</p>
+        <button id="controllaNumero">Controlla numero</button>
+        <p id="risultatoSwitch"></p>
+    </section>
+
+    <section>
+        <h2>8. Ciclo for</h2>
+        <button id="provaFor">Avvia ciclo for</button>
+        <p id="risultatoFor"></p>
+    </section>
+
+    <section>
+        <h2>9. Ciclo while</h2>
+        <button id="provaWhile">Avvia ciclo while</button>
+        <p id="risultatoWhile"></p>
+    </section>
+
+    <section>
+        <h2>10. Ciclo do while</h2>
+        <button id="provaDoWhile">Avvia ciclo do while</button>
+        <p id="risultatoDoWhile"></p>
+    </section>
+
+    <script>
+        // 1. Operatori matematici
+        document.getElementById("calcola").addEventListener("click", () => {
+            let numero1 = 10;
+            let numero2 = 5;
+            let addizione = numero1 + numero2;
+            let sottrazione = numero1 - numero2;
+            let moltiplicazione = numero1 * numero2;
+            let divisione = numero1 / numero2;
+            let numeroPari = (moltiplicazione % 2) === 0 ? 'numero pari' : 'numero dispari'
+
+            document.getElementById("risultatoMatematico").innerHTML =
+                "Addizione: " + addizione + "<br>" +
+                "Sottrazione: " + sottrazione + "<br>" +
+                "Moltiplicazione: " + moltiplicazione + "<br>" +
+                "Divisione: " + divisione + "<br>" + 
+                "Il prodotto è un " + numeroPari;
+        });
+
+        // 2. Operatori numerici
+        document.getElementById("provaNumerici").addEventListener("click", () => {
+            let numero = 5;
+            let negazione = -numero;
+            let incremento = numero;
+            incremento++;
+            let decremento = numero;
+            decremento--;
+
+            document.getElementById("risultatoNumerico").innerHTML =
+                "Numero iniziale: " + numero + "<br>" +
+                "Negazione: " + negazione + "<br>" +
+                "Incremento: " + incremento + "<br>" +
+                "Decremento: " + decremento;
+        });
+
+        // 3. Operatori relazionali
+        document.getElementById("provaRelazionali").addEventListener("click", () => {
+            let numero1 = 10;
+            let numero2 = 5;
+            let numero3 = "10";
+
+            document.getElementById("risultatoRelazionale").innerHTML =
+                "10 < 5: " + (numero1 < numero2) + "<br>" +
+                "10 > 5: " + (numero1 > numero2) + "<br>" +
+                "10 == 5: " + (numero1 == numero2) + "<br>" +
+                "10 != 5: " + (numero1 != numero2) + "<br>" +
+                "10 === '10': " + (numero1 === numero3) + "<br>" +
+                "10 !== '10': " + (numero1 !== numero3);
+        });
+
+        // 4. Operatori logici
+        document.getElementById("provaLogici").addEventListener("click", () => {
+            let eta = 20;
+            let patente = true;
+            let risultatoAnd = eta > 18 && patente == true;
+            let risultatoOr = eta < 18 || patente == true;
+            let risultatoNot = !patente;
+
+            document.getElementById("risultatoLogico").innerHTML =
+                "AND: " + risultatoAnd + "<br>" +
+                "OR: " + risultatoOr + "<br>" +
+                "NOT: " + risultatoNot;
+        });
+
+        // 5. Concatenazione delle stringhe
+        document.getElementById("provaStringhe").addEventListener("click", () => {
+            let nome = "Mario";
+            let cognome = "Rossi";
+            let nomeCompleto = `${nome} ${cognome}`;
+            document.getElementById("risultatoStringhe").textContent = `Nome completo: ${nomeCompleto}`;
+        });
+
+        // 6. If, else if, else
+        document.getElementById("controllaVoto").addEventListener("click", () => {
+            let voto = 4;
+            if (voto > 6) {
+                document.getElementById("risultatoVoto").textContent = "Ottimo!";
+            } else if (voto == 6) {
+                document.getElementById("risultatoVoto").textContent = "Sufficiente!";
+            } else {
+                document.getElementById("risultatoVoto").textContent = "Non sufficiente.";
+            }
+        });
+
+        // 7. Switch, case, break
+        document.getElementById("controllaNumero").addEventListener("click", () => {
+            let numero = 4;
+            switch (numero) {
+                case 1:
+                    document.getElementById("risultatoSwitch").textContent = "Hai scelto il numero 1.";
+                    break;
+                case 2:
+                    document.getElementById("risultatoSwitch").textContent = "Hai scelto il numero 2.";
+                    break;
+                case 3:
+                    document.getElementById("risultatoSwitch").textContent = "Hai scelto il numero 3.";
+                    break;
+                default:
+                    document.getElementById("risultatoSwitch").textContent = "Inserisci un numero da 1 a 3.";
+            }
+        });
+
+        // 8. Ciclo for
+        document.getElementById("provaFor").addEventListener("click", () => {
+            let risultato = "";
+            for (let i = 1; i <= 10; i++) {
+                risultato += "Numero: " + i + " ";
+            }
+            document.getElementById("risultatoFor").textContent = risultato;
+        });
+
+        // 9. Ciclo while
+        document.getElementById("provaWhile").addEventListener("click", () => {
+            let i = 1;
+            let risultato = "";
+            while (i <= 5) {
+                risultato += "Numero: " + i + " ";
+                i++;
+            }
+            document.getElementById("risultatoWhile").innerText = risultato;
+        });
+
+        // 10. Ciclo do while
+        document.getElementById("provaDoWhile").addEventListener("click", () => {
+            let i = 6;
+            let risultato = "";
+            do {
+                risultato += "Numero: " + i + " ";
+                i++;
+            } while (i <= 5);
+            document.getElementById("risultatoDoWhile").innerText = risultato;
+        });
+    </script>
+</body>
+</html>

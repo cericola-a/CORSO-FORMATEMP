@@ -1,0 +1,376 @@
+/* Impostazioni generali della pagina */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #263746;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Contenitore centrale */
+.contenitore {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Intestazione */
+header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.intestazione {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+header h1 {
+    color: #167d91;
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+header h1 span {
+    color: #f29b50;
+}
+
+/* Menu di navigazione */
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #263746;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f29b50;
+}
+
+/* Sezione principale con immagine di sfondo */
+.hero {
+    min-height: 500px;
+    background-image: linear-gradient(
+        rgba(10, 48, 66, 0.55),
+        rgba(10, 48, 66, 0.55)
+    ),
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+.testo-hero {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.sottotitolo {
+    color: #f29b50;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.testo-hero h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.testo-hero > p:not(.sottotitolo) {
+    max-width: 550px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Pulsanti */
+.bottone {
+    display: inline-block;
+    background-color: #f29b50;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.bottone:hover {
+    background-color: #df8033;
+    transform: translateY(-3px);
+}
+
+/* Sezione destinazioni */
+.destinazioni {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.titolo-sezione {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titolo-sezione h2,
+.contatti h2 {
+    font-size: 34px;
+    color: #167d91;
+    margin-bottom: 10px;
+}
+
+.titolo-sezione > p:last-child {
+    color: #667580;
+}
+
+/* Disposizione delle schede di viaggio */
+.griglia-viaggi {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Singola scheda di viaggio */
+.card-viaggio {
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-viaggio:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+}
+
+.card-viaggio img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.contenuto-card {
+    padding: 25px;
+}
+
+.categoria {
+    color: #e58a3d;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.contenuto-card h3 {
+    color: #167d91;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.contenuto-card > p:not(.categoria) {
+    color: #667580;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Prezzo del viaggio */
+.prezzo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.prezzo span {
+    color: #667580;
+    font-size: 13px;
+}
+
+.prezzo strong {
+    color: #167d91;
+    font-size: 24px;
+}
+
+.bottone-card {
+    display: block;
+    text-align: center;
+}
+
+/* Sezione servizi */
+.servizi {
+    background-color: #f0f8f9;
+    padding: 80px 0;
+}
+
+.griglia-servizi {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.servizio {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.icona {
+    width: 65px;
+    height: 65px;
+    background-color: #fff0df;
+    color: #e58a3d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 0 auto 20px;
+}
+
+.servizio h3 {
+    color: #167d91;
+    margin-bottom: 12px;
+}
+
+.servizio p {
+    color: #667580;
+    font-size: 14px;
+}
+
+/* Sezione contatti */
+.contatti {
+    background-color: #167d91;
+    color: #ffffff;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.contatti h2 {
+    color: #ffffff;
+    font-size: 38px;
+}
+
+.contatti > .contenitore > p:not(.sottotitolo) {
+    margin-bottom: 25px;
+}
+
+.bottone-chiaro {
+    background-color: #ffffff;
+    color: #167d91;
+}
+
+.bottone-chiaro:hover {
+    background-color: #f0f8f9;
+}
+
+/* Piè di pagina */
+footer {
+    background-color: #203744;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 13px;
+}
+
+footer p + p {
+    color: #c5d6dc;
+    margin-top: 5px;
+}
+
+/* Adatto la pagina a tablet e schermi più piccoli */
+@media screen and (max-width: 900px) {
+
+    .intestazione {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .griglia-viaggi {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .griglia-servizi {
+        grid-template-columns: 1fr;
+    }
+
+    .testo-hero h2 {
+        font-size: 40px;
+    }
+}
+
+/* Adatto la pagina agli smartphone */
+@media screen and (max-width: 600px) {
+
+    header h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    nav {
+        gap: 10px 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .testo-hero h2 {
+        font-size: 34px;
+    }
+
+    .testo-hero > p:not(.sottotitolo) {
+        font-size: 16px;
+    }
+
+    .titolo-sezione h2,
+    .contatti h2 {
+        font-size: 28px;
+    }
+
+    .griglia-viaggi {
+        grid-template-columns: 1fr;
+    }
+
+    .destinazioni {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .servizi {
+        padding: 55px 0;
+    }
+}
