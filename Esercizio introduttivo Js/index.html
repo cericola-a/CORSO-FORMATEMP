@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esempi JavaScript</title>
+    <style>
+        body{
+            margin: 30px;
+            text-align: center;
+            align-items: center;
+        }
+
+        p{
+            max-width: 300px;
+            padding: 10px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Esempi JavaScript</h1>
+
+    <!-- Paragrafo HTML che JavaScript aggiornerà e di cui cambierà lo stile. -->
+    <p id="messaggio">Premi il pulsante per vedere gli esempi.</p>
+
+    <!-- Paragrafo HTML vuoto che JavaScript aggiornerà e di cui cambierà lo stile. -->
+    <p id="messaggio2"></p>
+
+    <!-- Pulsante HTML per avviare gli esempi. -->
+    <button id="pulsante">Avvia gli esempi</button>
+
+    <script>
+        //recupera il pulsante HTML con document.getElementById.
+        const pulsante = document.getElementById("pulsante");
+
+        // Avvia gli esempi quando si clicca il pulsante.
+        pulsante.addEventListener("click", function () {
+            //mostra un alert.
+            alert("Ciao! Questo è un alert JavaScript.");
+
+            //usa document.getElementById per recuperare un elemento HTML.
+            const elemento = document.getElementById("messaggio");
+
+            //cambia lo stile dell'elemento HTML selezionato.
+            elemento.style.color = "red";
+
+            //usa const e let per creare variabili.
+            let nome = "Luca";
+            let anni = 25;
+
+            //visualizza nella pagina il valore delle variabili.
+            elemento.textContent = "Nome: " + nome + " — Età: " + anni;
+
+            //innerHTML
+            let elemento2 = document.getElementById("messaggio2");
+            let nome2 = "Angelo";
+            let anni2 = 30;
+
+            elemento2.innerHTML = `<strong>Sono ${nome2} e ho ${anni2} anni!`;
+            elemento2.style.backgroundColor = "bisque";
+
+            //concatena stringhe per comporre un messaggio.
+            let saluto = "Saluto in console: Ciao, " + nome + "!";
+            let saluto2 = `Presentazione in console: Ciao sono ${nome2} e ho ${anni2} anni.`
+
+            //visualizza il messaggio nella console del browser.
+            console.log(saluto);
+            console.log(saluto2);
+        });
+    </script>
+</body>
+
+</html>
