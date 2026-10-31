@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Underscore.js</h1>
+
+    <p>Lista originale => <span id="originale"></span></p>
+    <p>Lista numeri doppi => <span id="doppio"></span></p>
+    <p>Lista numeri maggiori di 10 => <span id="maggiori"></span></p>
+    <p>Lista somma numeri maggiori di 10 => <span id="somma"></span></p>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.8/underscore-umd-min.js"></script>
+    <script>
+        const originale = document.getElementById('originale');
+        const doppio = document.getElementById('doppio');
+        const maggiori = document.getElementById('maggiori');
+        const somma = document.getElementById('somma');
+        
+        //definisco array numeri iniziale
+        let numeriOriginali = [3,5,7,9,11,13,15];
+
+        originale.innerText = `${numeriOriginali}`;
+
+        //ottengo un nuovo array con i numeri doppi partendo da quello originale (map)
+        let numeriDoppi = _.map(numeriOriginali, function(nO){return nO * 2});
+
+        doppio.innerText = numeriDoppi;
+
+        
+        //filtro solo quelli maggiori di 10 (filter)
+        let maggiori10 = _.filter(numeriDoppi, function(nD){return nD > 10});
+
+        maggiori.innerText = maggiori10;
+        
+
+        //ottengo la somma di tutti i numeri (reduce)
+        let sommaNumeri = _.reduce(maggiori10, function(acc, nM){ return acc + nM; }, 0);
+
+        somma.innerText = sommaNumeri;
+    
+    </script>
+</body>
+</html>

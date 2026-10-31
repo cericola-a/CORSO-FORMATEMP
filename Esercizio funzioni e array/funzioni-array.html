@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio su Funzioni e Array</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        section {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #287a8c;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>ESERCIZIO SU FUNZIONI E ARRAY</h1>
+
+    <!-- 1. Funzione JavaScript -->
+    <section>
+        <h2>1. Funzione JavaScript</h2>
+        <p>Una funzione esegue delle istruzioni quando viene richiamata.</p>
+        <p id="risultato1"></p>
+    </section>
+
+    <!-- 2. Funzione con return -->
+    <section>
+        <h2>2. Funzione con return</h2>
+        <p>La funzione restituisce un risultato utilizzando return.</p>
+        <p id="risultato2"></p>
+    </section>
+
+    <!-- 3. Array vuoto -->
+    <section>
+        <h2>3. Array vuoto</h2>
+        <p>Creiamo un array vuoto e aggiungiamo alcuni numeri.</p>
+        <p id="risultato3"></p>
+    </section>
+
+    <!-- 4. Array con valori iniziali -->
+    <section>
+        <h2>4. Array con valori iniziali</h2>
+        <p>Creiamo un array contenente alcuni numeri.</p>
+        <p id="risultato4"></p>
+    </section>
+
+    <!-- 5. Array multidimensionale -->
+    <section>
+        <h2>5. Array multidimensionale</h2>
+        <p>Un array che contiene altri array.</p>
+        <p id="risultato5"></p>
+    </section>
+
+    <!-- 6. Accesso tramite indice -->
+    <section>
+        <h2>6. Accesso all'array tramite indice</h2>
+        <p>Possiamo leggere un elemento indicando la sua posizione.</p>
+        <p id="risultato6"></p>
+    </section>
+
+    <!-- 7. Proprietà length -->
+    <section>
+        <h2>7. Proprietà length</h2>
+        <p>La proprietà length indica quanti elementi contiene un array.</p>
+        <p id="risultato7"></p>
+    </section>
+
+    <!-- 8. Copia di un array -->
+    <section>
+        <h2>8. Copia di un array</h2>
+        <p>Copiamo un array esistente utilizzando lo spread operator.</p>
+        <p id="risultato8"></p>
+    </section>
+
+    <!-- 9. Modifica di un array -->
+    <section>
+        <h2>9. Modifica di un array</h2>
+        <p>Modifichiamo un elemento già presente nell'array.</p>
+        <p id="risultato9"></p>
+    </section>
+
+    <!-- 10. Ciclo for -->
+    <section>
+        <h2>10. Ciclo for su array</h2>
+        <p>Utilizziamo il ciclo for per leggere tutti gli elementi.</p>
+        <p id="risultato10"></p>
+    </section>
+
+    <!-- 11. Ciclo for of -->
+    <section>
+        <h2>11. Ciclo for of su array</h2>
+        <p>Utilizziamo il ciclo for of per leggere direttamente i valori.</p>
+        <p id="risultato11"></p>
+    </section>
+
+    <!-- 12. Metodo map -->
+    <section>
+        <h2>12. Metodo map su array</h2>
+        <p>Il metodo map crea un nuovo array modificando ogni elemento.</p>
+        <p id="risultato12"></p>
+    </section>
+
+    <!-- 13. Metodo filter -->
+    <section>
+        <h2>13. Metodo filter su array</h2>
+        <p>Il metodo filter crea un nuovo array con gli elementi che rispettano una condizione.</p>
+        <p id="risultato13"></p>
+    </section>
+
+    <script>
+        // 1. FUNZIONE JAVASCRIPT
+
+        function saluta() {
+            document.getElementById("risultato1").textContent = "Ciao! Questa è una funzione.";
+        }
+
+        saluta();
+
+
+        // 2. FUNZIONE CON RETURN
+
+        function prodotto(a, b) {
+            return a * b;
+        }
+
+        let risultato = prodotto(5, 3);
+
+        document.getElementById("risultato2").textContent = "Il prodotto è: " + risultato;
+
+
+        // 3. ARRAY VUOTO
+
+        let numeriVuoti = [];
+
+        numeriVuoti.push(10);
+        numeriVuoti.push(20);
+        numeriVuoti.push(30);
+
+        document.getElementById("risultato3").textContent = "Array riempito: " + numeriVuoti;
+
+
+        // 4. ARRAY CON VALORI INIZIALI
+
+        let numeri = [2, 4, 6, 8, 10];
+
+        document.getElementById("risultato4").textContent = "Numeri: " + numeri;
+
+
+        // 5. ARRAY MULTIDIMENSIONALE - Array di array
+
+        let gruppi = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+
+        document.getElementById("risultato5").textContent = "Primo gruppo: " + gruppi[0] + " - ";
+        document.getElementById("risultato5").textContent += "Secondo gruppo: " + gruppi[1] + " - ";
+        document.getElementById("risultato5").textContent += "Terzo gruppo: " + gruppi[2];
+
+
+        // 6. ACCESSO ALL'ARRAY TRAMITE INDICE
+
+        const pizze = ["Margherita","Diavola","Marinara"];
+
+        
+
+        pizze.forEach((p, i) => {
+            risultato6.innerHTML += `La pizza ${p} ha indice ${i} nell'array.<br>`
+        });
+
+
+
+        // 7. PROPRIETÀ LENGTH
+
+        let numeriLength = [5, 10, 15, 20, 25];
+
+        document.getElementById("risultato7").textContent = "Numero di elementi: " + numeriLength.length;
+
+
+        // 8. COPIA DI UN ARRAY
+
+        let arrayOriginale = [1, 2, 3, 4];
+
+        let arrayCopia = [...arrayOriginale];
+
+        document.getElementById("risultato8").textContent = "Array originale: " + arrayOriginale + " | Copia: " + arrayCopia;
+
+
+        // 9. MODIFICA DI UN ARRAY
+
+        let numeriModifica = [10, 20, 30, 40];
+
+        numeriModifica[1] = 99;
+
+        document.getElementById("risultato9").textContent = "Array modificato: " + numeriModifica;
+
+
+        // 10. CICLO FOR SU ARRAY
+
+        let numeriFor = [1, 2, 3, 4, 5];
+
+        let risultatoFor = "";
+
+        for (let i = 0; i < numeriFor.length; i++) {
+            risultatoFor += numeriFor[i] + " ";
+        }
+
+        document.getElementById("risultato10").textContent = "Numeri: " + risultatoFor;
+
+
+        // 11. CICLO FOR OF SU ARRAY
+
+        let numeriForOf = [10, 20, 30, 40];
+
+        let risultatoForOf = "";
+
+        for (let numero of numeriForOf) {
+            risultatoForOf += numero + " ";
+        }
+
+        document.getElementById("risultato11").textContent = "Numeri: " + risultatoForOf;
+
+
+        // 12. METODO MAP SU ARRAY
+
+        let numeriMap = [1, 2, 3, 4, 5];
+
+        let numeriTriplicati = numeriMap.map(numero => numero * 3);
+
+        document.getElementById("risultato12").textContent = "Numeri triplicati: " + numeriTriplicati;
+
+
+        // 13. METODO FILTER SU ARRAY
+
+        let numeriFilter = [1, 2, 3, 4, 5, 6, 7, 8];
+
+        let numeriPari = numeriFilter.filter(numero => numero % 2 === 0);
+
+        document.getElementById("risultato13").textContent = "Numeri pari: " + numeriPari;
+    </script>
+
+</body>
+
+</html>

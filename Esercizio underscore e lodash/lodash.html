@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio Lodash</title>
+</head>
+
+<body>
+
+    <h1>ESERCIZIO LODASH</h1>
+
+    <h2>Array di numeri</h2>
+    <p id="numeri"></p>
+
+    <h2>Risultato</h2>
+    <p id="risultato"></p>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+<script>
+    // Creo un array di numeri
+    let numeri = [12, 5, 8, 21, 14, 3, 30, 17];
+
+    // Mostro l'array nella pagina
+    document.getElementById("numeri").textContent = numeri;
+
+    // Divido i numeri in maggiori e minori di 15 con Lodash
+    let gruppi = _.partition(numeri, function(numero) {
+        return numero > 15;
+    });
+
+    // Mostro i numeri maggiori di 15
+    document.getElementById("risultato").innerHTML =
+        "Numeri maggiori di 15 => " + gruppi[0] +
+        "<br>Numeri minori o uguali a 15 => " + gruppi[1];
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 1 e 2</title>
+    <style>
+        section{
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+        #esercizio1 div:nth-child(even){
+            background-color: rgba(211, 211, 211, 0.489);
+        }
+    </style>
+</head>
+<body>
+    <section id="esercizio1">
+        <!--ESERCIZIO 1-->
+        <h1>Esercizio 1 - perimetro ed area</h1>
+        <div>
+            <p>Quadrato con lato: 4</p>
+            <p id="p-quadrato"></p>
+            <p id="a-quadrato"></p>
+        </div>
+        <div>
+            <p>Rettangolo con base: 2 e altezza: 6</p>
+            <p id="p-rettangolo"></p>
+            <p id="a-rettangolo"></p>
+        </div>
+        <div>
+            <p>Triangolo equilatero con lato: 7 e altezza: 10</p>
+            <p id="p-triangolo"></p>
+            <p id="a-triangolo"></p>
+        </div>
+        <div>
+            <p>Rombo con lato 15 diagonale maggiore 20 diagonale minore 5</p>
+            <p id="p-rombo"></p>
+            <p id="a-rombo"></p>
+        </div>
+    </section>
+    <section>
+    <!--ESERCIZIO 2-->
+    <h1>Esercizio 2 - if e switch</h1>
+    <div>
+        <p>Il risultato del tuo test è <span id="voto"></span></p>
+    </div>
+    <div>
+        <p>Il giorno scelto è <span id="giorno"></span></p>
+    </div>
+    
+    
+    
+    </section>
+        <script>
+            //ESERCIZIO 1
+
+            //quadrato
+            const pQuadrato = document.getElementById('p-quadrato');
+            const aQuadrato = document.getElementById('a-quadrato');
+
+            const latoQ = 4;
+            const pQ = latoQ * 4;
+            const aQ = latoQ^2;
+
+            pQuadrato.textContent = `Il perimentro del quadrato è ${pQ}`;
+            aQuadrato.textContent = `L'area del quadrato è ${aQ}`;
+
+            //rettangolo
+            const pRettangolo = document.getElementById('p-rettangolo');
+            const aRettangolo = document.getElementById('a-rettangolo');
+
+            const baseR = 2;
+            const altezzaR = 6;
+
+            const pR = (baseR + altezzaR) * 2;
+            const aR = baseR * altezzaR;
+
+            pRettangolo.textContent = `Il perimetro del rettangolo è ${pR}`;
+            aRettangolo.textContent = `L'area del rettangolo è ${aR}`;
+
+            //triangolo
+            const pTriangolo = document.getElementById('p-triangolo');
+            const aTriangolo = document.getElementById('a-triangolo');
+
+            const latoT = 7;
+            const altezzaT = 10;
+
+            const pT = latoT * 3;
+            const aT = (latoT * altezzaT) / 2;
+
+            pTriangolo.textContent = `Il perimentro del triangolo è ${pT}`;
+            aTriangolo.textContent = `L'area del triangolo è ${aT}`;
+
+            //rombo
+            const pRombo = document.getElementById('p-rombo');
+            const aRombo = document.getElementById('a-rombo');
+
+            const latoRombo = 15;
+            const diagonaleMaggiore = 20;
+            const diagonaleMinore = 5;
+
+            const perimetroRombo = latoRombo * 4;
+            const areaRombo = (diagonaleMaggiore * diagonaleMinore) / 2;
+
+            pRombo.textContent = `Il perimentro del rombo è ${perimetroRombo}`;
+            aRombo.textContent = `L'area del rombo è ${areaRombo}`;
+
+
+            //ESERCIZIO 2
+            //if
+            const voto = document.getElementById('voto');
+
+            let punteggio = 75;
+
+            if(punteggio >= 90){
+                voto.innerText = "A";
+            }else if(punteggio < 90 && punteggio >= 80){
+                voto.innerText = "B";
+            }else if(punteggio < 80 && punteggio >= 70){
+                voto.innerText = "C";
+            }else{
+                voto.innerText = "D";
+            }
+
+
+            //switch
+
+            const giorno = document.getElementById('giorno');
+
+            let numero = 8;
+
+            switch(numero){
+                case 1:
+                    giorno.innerText = 'Lunedì';
+                    break;
+                case 2:
+                    giorno.innerText = 'Martedi';
+                    break;
+                case 3:
+                    giorno.innerText = 'Mercoledi';
+                    break;
+                case 4:
+                    giorno.innerText = 'Giovedi';
+                    break;
+                case 5:
+                    giorno.innerText = 'Venerdi';
+                    break;
+                case 6:
+                    giorno.innerText = 'Sabato';
+                    break;
+                case 7:
+                    giorno.innerText = 'Domenica';
+                    break;
+                default:
+                    giorno.innerText = 'Inesistente - Scegli un numero tra 1 e 7';
+            }
+
+
+        </script>
+        
+</body>
+</html>

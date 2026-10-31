@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio Underscore.js</title>
+</head>
+
+<body>
+
+    <h1>ESERCIZIO UNDERSCORE.JS</h1>
+
+    <h2>Array di numeri</h2>
+    <p id="numeri"></p>
+
+    <h2>Conteggio numeri pari e dispari</h2>
+    <p id="risultato"></p>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.8/underscore-umd-min.js"></script>
+
+    <script>
+        // Creo un array di numeri
+        var numeri = [22,5,79,67,45,32,4,80,200,23,44];
+
+        // Mostro l'array nella pagina
+        document.getElementById("numeri").textContent = numeri;
+
+        // Conto i numeri pari e dispari con Underscore.js
+        var conteggio = _.countBy(numeri, function(numero) {
+            if (numero % 2 == 0) {
+                return "pari";
+            } else {
+                return "dispari";
+            }
+        });
+
+        // Mostro il risultato nella pagina
+        document.getElementById("risultato").innerHTML =
+            "Numeri pari: " + conteggio.pari +
+            "<br>Numeri dispari: " + conteggio.dispari;
+    </script>
+
+</body>
+
+</html>
